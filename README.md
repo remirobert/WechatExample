@@ -8,6 +8,11 @@ Wechat SDK
  
 # configuration
 
+First you need to add a URL Schemes to your project.
+Go to your **project configuration** > **Info** > **URL Types**
+
+Then add a new one, the **identifier** can be : "weixin", the **URL schemes** must be your wechat appId.
+
 To use your own **wechat credential** (*appID and appSecret*) information, you need to change the top of the file **AuthWechatManager.m**, with your informations : 
 
 ```Objective-c
