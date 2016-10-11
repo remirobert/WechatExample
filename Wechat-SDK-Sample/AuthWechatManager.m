@@ -45,7 +45,6 @@ typedef void (^RequestCompletedBlock)(NSDictionary * __nullable response, NSErro
     NSString *urlString = [url absoluteString];
     NSString *urlLink = [[[[urlString componentsSeparatedByString:@"//"] lastObject] componentsSeparatedByString:@"?"] firstObject];
 
-    NSLog(@"url link : %@", urlLink);
     if (urlLink && ([urlLink isEqualToString:@"oauth"] || [urlLink isEqualToString:@"wapoauth"])) {
         [self initManager];
         self.completion = completion;
@@ -66,13 +65,7 @@ typedef void (^RequestCompletedBlock)(NSDictionary * __nullable response, NSErro
     }
 }
 
--(void) onReq:(BaseReq*)req {
-    NSLog(@"req ok : %@", req);
-}
-
 - (void)onResp:(BaseResp*)resp {
-    NSLog(@"get response fromn wechat : %@", resp);
-
     if (resp.errCode != WXSuccess) {
         self.completion(nil, [NSError errorWithDomain:@"wechat_error_domain" code:resp.errCode userInfo:@{NSLocalizedDescriptionKey: resp.errStr}]);
     }
@@ -87,7 +80,6 @@ typedef void (^RequestCompletedBlock)(NSDictionary * __nullable response, NSErro
                     WechatUser *user = [[WechatUser alloc] initWithJSON:response];
                     NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@access_token=%@&openid=%@", BASE_URL_PROFILE, (NSString *)[response objectForKey:@"access_token"], [response objectForKey:@"openid"]]];
                     [self performRequestWithUrl:url completion:^(NSDictionary * _Nullable response, NSError * _Nullable error) {
-                        NSLog(@"response : %@", response);
                         [user addInformationProfileWithJSON:response];
                         self.completion(user, error);
                     }];
