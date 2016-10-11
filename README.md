@@ -3,7 +3,7 @@ Wechat SDK
 
 # installation
 
- - Simply copy the files : **AuthWechatManager.m**, **AuthWechatManager.h** into your project.
+ - Simply copy the files : **AuthWechatManager.m**, **AuthWechatManager.h**, **WechatUser.m** and **WechatUser.h** into your project.
  - Add also the **wechat SDK** : **libWeChatSDK.a**, **WXApi.h**, **WXApiObject.h** (*chinese version*).
  
 # configuration
