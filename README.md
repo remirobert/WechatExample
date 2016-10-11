@@ -67,3 +67,44 @@ How to handle the authentification, the simpliest way to do that, is to add a me
     }];
 }
 ```
+
+# Usage sharing content
+
+To share content on Wechat, first the user **need the app**, or all the call will fail.
+The user doesn't need to be logged to use the wechat sharing feature.
+
+You can share :
+
+ - A link
+ - An image
+ - A text
+
+```Objective-c
+- (BOOL)shareLinkWithTitle:(NSString * _Nullable)title
+               description:(NSString * _Nullable)description
+                thumbImage:(UIImage * _Nullable)thumbImage
+                       url:(NSString * _Nonnull)url
+                        to:(int)scene;
+
+/*!
+ @brief Share an image.
+ 
+ @discussion Share an image, to the Wechat application.
+ @param  image a image.
+ @param  scene specifie where to send the content : WXSceneTimeline (moment), WXSceneSession (contacts).
+ 
+ @return BOOL return the success status.
+ */
+- (BOOL)shareImageWithImage:(UIImage * _Nonnull)image to:(int)scene;
+
+/*!
+ @brief Share a text.
+ 
+ @discussion Share a text, to the Wechat application.
+ @param  text a text.
+ @param  scene specifie where to send the content : WXSceneTimeline (moment), WXSceneSession (contacts).
+ 
+ @return BOOL return the success status.
+ */
+- (BOOL)shareTextWithText:(NSString * _Nonnull)text to:(int)scene;
+```
