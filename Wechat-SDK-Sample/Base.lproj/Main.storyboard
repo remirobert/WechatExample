@@ -29,11 +29,74 @@
                                     <action selector="auth:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vw8-8D-dPD"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZgM-2w-zPL">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="i2R-00-gBf"/>
+                                    <constraint firstAttribute="width" constant="195" id="pWX-ao-hgH"/>
+                                </constraints>
+                                <state key="normal" title="share picture"/>
+                                <connections>
+                                    <action selector="sharePicture:" destination="CFd-TG-jSo" eventType="touchUpInside" id="1F0-hH-FHZ"/>
+                                    <action selector="sharePicture:" destination="BYZ-38-t0r" eventType="touchUpInside" id="E6R-w3-wPD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gkd-iA-kdx">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="raT-af-2gz"/>
+                                    <constraint firstAttribute="width" constant="170" id="xJV-ua-Rje"/>
+                                </constraints>
+                                <state key="normal" title="share text"/>
+                                <connections>
+                                    <action selector="shareText:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qa2-rF-tQD"/>
+                                    <action selector="shareText:" destination="CFd-TG-jSo" eventType="touchUpInside" id="Rmy-ni-jq2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5kr-cA-zwJ">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="195" id="7Cs-QB-oje"/>
+                                    <constraint firstAttribute="height" constant="30" id="laU-xo-OPD"/>
+                                </constraints>
+                                <state key="normal" title="share link"/>
+                                <connections>
+                                    <action selector="shareLink:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0RS-gv-f1t"/>
+                                    <action selector="shareLink:" destination="CFd-TG-jSo" eventType="touchUpInside" id="8Sd-LH-Xkt"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Offline sharing" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zGR-ij-BIk">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="02H-Gx-GAP"/>
+                                    <constraint firstAttribute="width" constant="112" id="ZBv-dR-L3K"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="...................................................." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eRQ-ck-Qpx">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Nv3-bq-vyG"/>
+                                    <constraint firstAttribute="width" constant="243" id="cww-ge-ZQc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="zGR-ij-BIk" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="41" id="1Cg-mk-B71"/>
+                            <constraint firstItem="ZgM-2w-zPL" firstAttribute="top" secondItem="Gkd-iA-kdx" secondAttribute="bottom" constant="8" id="1sA-1h-vae"/>
+                            <constraint firstItem="5kr-cA-zwJ" firstAttribute="top" secondItem="zGR-ij-BIk" secondAttribute="bottom" constant="47" id="Ae0-iq-4aP"/>
+                            <constraint firstItem="Gkd-iA-kdx" firstAttribute="top" secondItem="5kr-cA-zwJ" secondAttribute="bottom" constant="8" id="G2q-No-gEz"/>
+                            <constraint firstItem="eRQ-ck-Qpx" firstAttribute="top" secondItem="ZgM-2w-zPL" secondAttribute="bottom" constant="8" id="Gav-YB-SyR"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ks8-Zp-DZF" secondAttribute="bottom" constant="20" id="MeN-5D-igt"/>
+                            <constraint firstItem="Gkd-iA-kdx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NP3-vl-Q0M"/>
                             <constraint firstItem="ks8-Zp-DZF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aBi-DI-bR4"/>
+                            <constraint firstItem="ZgM-2w-zPL" firstAttribute="top" secondItem="Gkd-iA-kdx" secondAttribute="bottom" constant="8" id="gDW-2A-Zzn"/>
+                            <constraint firstItem="zGR-ij-BIk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gfM-3x-YI8"/>
+                            <constraint firstItem="Gkd-iA-kdx" firstAttribute="top" secondItem="5kr-cA-zwJ" secondAttribute="bottom" constant="8" id="pOa-1y-DFa"/>
+                            <constraint firstItem="ZgM-2w-zPL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qeV-XW-QNB"/>
+                            <constraint firstItem="eRQ-ck-Qpx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wf3-7N-eHf"/>
+                            <constraint firstItem="5kr-cA-zwJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="x1y-Uc-2mc"/>
                         </constraints>
                     </view>
                 </viewController>
