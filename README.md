@@ -85,6 +85,18 @@ You can share :
  - A text
 
 ```Objective-c
+/*!
+ @brief Share a link.
+ 
+ @discussion Share a link, to the Wechat application.
+ @param  title a title.
+ @param  description a description.
+ @param  thumbImage a preview visible on the chat.
+ @param  url the link url.
+ @param  scene specifie where to send the content : WXSceneTimeline (moment), WXSceneSession (contacts).
+ 
+ @return BOOL return the success status.
+ */
 - (BOOL)shareLinkWithTitle:(NSString * _Nullable)title
                description:(NSString * _Nullable)description
                 thumbImage:(UIImage * _Nullable)thumbImage
