@@ -1,5 +1,5 @@
 # WechatExample
-Wechat SDK 
+Wechat SDK example for login and sharing content. 🔫
 
 # installation
 
